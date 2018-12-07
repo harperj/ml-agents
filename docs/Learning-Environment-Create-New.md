@@ -22,7 +22,7 @@ steps:
    methods to update the scene independently of any agents. For example, you can
    add, move, or delete agents and other entities in the environment.
 3. Create one or more Brain assets by clicking `Assets -> Create -> ML-Agents
-   -> Bain`. And name them appropriately.
+   -> Brain`. And name them appropriately.
 4. Implement your Agent subclasses. An Agent subclass defines the code an Agent
    uses to observe its environment, to carry out assigned actions, and to
    calculate the rewards used for reinforcement training. You can also implement
@@ -67,10 +67,10 @@ agent to seek, and a Sphere to represent the Agent itself.
 
 1. Right click in Hierarchy window, select 3D Object > Plane.
 2. Name the GameObject "Floor."
-3. Select Plane to view its properties in the Inspector window.
+3. Select the Floor GameObject to view its properties in the Inspector window.
 4. Set Transform to Position = (0,0,0), Rotation = (0,0,0), Scale = (1,1,1).
-5. On the Plane's Mesh Renderer, expand the Materials property and change the
-   default-material to *floor*.
+5. On the Floor's Mesh Renderer, expand the Materials property and change
+   Default-Material to *floor*.
 
 (To set a new material, click the small circle icon next to the current material
 name. This opens the **Object Picker** dialog so that you can choose the a
@@ -84,8 +84,8 @@ different material from the list of all materials currently in the project.)
 2. Name the GameObject "Target"
 3. Select Target to view its properties in the Inspector window.
 4. Set Transform to Position = (3,0.5,3), Rotation = (0,0,0), Scale = (1,1,1).
-5. On the Cube's Mesh Renderer, expand the Materials property and change the
-   default-material to *Block*.
+5. On the Cube's Mesh Renderer, expand the Materials property and change
+   Default-Material to *Block*.
 
 ![The Target Cube in the Inspector window](images/mlagents-NewTutBlock.png)
 
@@ -93,10 +93,10 @@ different material from the list of all materials currently in the project.)
 
 1. Right click in Hierarchy window, select 3D Object > Sphere.
 2. Name the GameObject "RollerAgent"
-3. Select Target to view its properties in the Inspector window.
+3. Select RollerAgent to view its properties in the Inspector window.
 4. Set Transform to Position = (0,0.5,0), Rotation = (0,0,0), Scale = (1,1,1).
-5. On the Sphere's Mesh Renderer, expand the Materials property and change the
-   default-material to *checker 1*.
+5. On the Sphere's Mesh Renderer, expand the Materials property and change
+   Default-Material to *checker 1*.
 6. Click **Add Component**.
 7. Add the Physics/Rigidbody component to the Sphere. (Adding a Rigidbody)
 

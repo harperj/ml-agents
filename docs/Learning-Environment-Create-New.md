@@ -95,10 +95,10 @@ different material from the list of all materials currently in the project.)
 2. Name the GameObject "RollerAgent"
 3. Select RollerAgent to view its properties in the Inspector window.
 4. Set Transform to Position = (0,0.5,0), Rotation = (0,0,0), Scale = (1,1,1).
-5. On the Sphere's Mesh Renderer, expand the Materials property and change
+5. On the RollerAgent's Mesh Renderer, expand the Materials property and change
    Default-Material to *checker 1*.
 6. Click **Add Component**.
-7. Add the Physics/Rigidbody component to the Sphere. (Adding a Rigidbody)
+7. Add the Physics/Rigidbody component to the RollerAgent.
 
 ![The Agent GameObject in the Inspector window](images/mlagents-NewTutSphere.png)
 
@@ -151,7 +151,8 @@ public class RollerAcademy : Academy { }
 
 The default settings for the Academy properties are also fine for this
 environment, so we don't need to change anything for the RollerAcademy component
-in the Inspector window.
+in the Inspector window. You may not have the RollerBrain in the Broadcast Hub yet, 
+more on that later. 
 
 ![The Academy properties](images/mlagents-NewTutAcademy.png)
 
@@ -159,7 +160,7 @@ in the Inspector window.
 
 The Brain object encapsulates the decision making process. An Agent sends its
 observations to its Brain and expects a decision in return. The type of the Brain
-(Learning, Heuristic or player) determines how the Brain makes decisions. 
+(Learning, Heuristic or Player) determines how the Brain makes decisions. 
 To create the Brain:
 
 1. Go to `Assets -> Create -> ML-Agents` and select the type of Brain you want to
@@ -187,7 +188,8 @@ Then, edit the new `RollerAgent` script:
 
 1. In the Unity Project window, double-click the `RollerAgent` script to open it
    in your code editor.
-2. In the editor, change the base class from `MonoBehaviour` to `Agent`.
+2. In the editor, change the base class from `MonoBehaviour` to `Agent`, and add 
+   `using MLAgents` to the preamble. 
 3. Delete the `Update()` method, but we will use the `Start()` function, so
    leave it alone for now.
 
@@ -532,7 +534,7 @@ environment.
 Now you can train the Agent. To get ready for training, you must first to change
 the `Brain` of the agent to be the Learning Brain `RollerBallBrain`.
 Then drag the `RollerBallBrain` into the Academy's `Broadcast Hub` and check 
-to `Control` checkbox for that brain. From there, the process is
+the `Control` checkbox for that brain. From there, the process is
 the same as described in [Training ML-Agents](Training-ML-Agents.md).
 
 ## Review: Scene Layout
@@ -546,7 +548,7 @@ to use Unity ML-Agents:
 * Academy
 * Agents
 
-You also need to have brain assets linked appropriately to Agents and to Academy
+You also need to have brain assets linked appropriately to Agents and to the Academy.
 
 Keep in mind:
 

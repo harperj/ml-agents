@@ -96,7 +96,7 @@ different material from the list of all materials currently in the project.)
 3. Select RollerAgent to view its properties in the Inspector window.
 4. Set Transform to Position = (0,0.5,0), Rotation = (0,0,0), Scale = (1,1,1).
 5. On the RollerAgent's Mesh Renderer, expand the Materials property and change
-   Default-Material to *checker 1*.
+   Default-Material to *CheckerGoal*.
 6. Click **Add Component**.
 7. Add the Physics/Rigidbody component to the RollerAgent.
 
